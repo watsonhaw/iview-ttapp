@@ -15,7 +15,7 @@ Component({
             type: Boolean,
             value: false
         },
-        // hidden input name
+        // hidden inut name
         name: {
             type: String,
             value: ''
@@ -29,7 +29,7 @@ Component({
         toggle() {
             if (this.data.disabled) return;
             const data = this.data;
-            const value = !data.value;
+            const value = data.value ? false : true;
             this.triggerEvent('change', {
                 value: value
             })
